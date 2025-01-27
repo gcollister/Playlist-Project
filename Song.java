@@ -16,6 +16,13 @@ public class Song {
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
+
+     public Song(String myTitle, String myArtist, double myDuration){
+        title = myTitle;
+        artist = myArtist;
+        duration = myDuration;
+        liked = false;
+     }
     
 
      public Song(String myTitle, String myArtist, double myDuration){
