@@ -9,8 +9,12 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
+<<<<<<< HEAD
 
     private ArrayList<Song> list;
+=======
+    private ArrayList<Song> playlist;
+>>>>>>> fc147af9798efbf1867bb3e6d74bec9ee5ac8d38
 
 
 
@@ -18,8 +22,16 @@ public class Playlist {
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
+<<<<<<< HEAD
 
     list = new ArrayList<Song>();
+=======
+     public Playlist(){
+        playlist = new ArrayList<Song>();
+     }
+      
+
+>>>>>>> fc147af9798efbf1867bb3e6d74bec9ee5ac8d38
       
 
       /**
