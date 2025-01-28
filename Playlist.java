@@ -51,8 +51,9 @@ public class Playlist {
         String b = "Songs\n";
         for(Song a : playlist){
             b += a.toString() + "\n";
+        
+        b += "Duration: " + a.getDurration(); // apparently duration isn't correct
         }
-        b += "Duration: " + duration; // apparently duration isn't correct
         return b;
     }
 
