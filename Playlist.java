@@ -20,8 +20,7 @@ public class Playlist {
       */
 
     public Playlist(){
-      playlist = new ArrayList<Song>();
-
+    playlist = new ArrayList<Song>();
     }
 
       /**
@@ -46,6 +45,15 @@ public class Playlist {
 
     public void removeSong(Song a){
         playlist.remove(a);
+    }
+
+    public String examineAllSongs(){
+        String b = "Songs\n";
+        for(Song a : playlist){
+            b += a.toString() + "\n";
+        }
+        b += "Duration: " + duration; // apparently duration isn't correct
+        return b;
     }
 
 }
