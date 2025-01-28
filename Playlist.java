@@ -52,7 +52,7 @@ public class Playlist {
         for(Song a : playlist){
             b += a.toString() + "\n";
         
-        b += "Duration: " + a.getDurration(); // apparently duration isn't correct
+        b += "Duration: " + a.getDurration(); // still the spelling error
         }
         return b;
     }
