@@ -25,14 +25,6 @@ public class Song {
      }
     
 
-     public Song(String myTitle, String myArtist, double myDuration){
-        title = myTitle;
-        artist = myArtist;
-        duration = myDuration;
-        liked = false;
-     }
-    
-
 
 
 
