@@ -22,17 +22,11 @@ public class Playlist {
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
-<<<<<<< HEAD
 
-    list = new ArrayList<Song>();
-=======
-     public Playlist(){
-        playlist = new ArrayList<Song>();
-     }
-      
+    public Playlist(){
+      playlist = new ArrayList<Song>();
 
->>>>>>> fc147af9798efbf1867bb3e6d74bec9ee5ac8d38
-      
+    }
 
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
@@ -46,31 +40,15 @@ public class Playlist {
        */
 
     public void addSong(Song a){
-        list.add(a);
+        playlist.add(a);
     }
 
     public void likeSong(Song a){
-        list.isLiked(); // edit
+        playlist.isLiked(); // edit
     }
 
     public void removeSong(Song a){
-        list.remove(a);
+        playlist.remove(a);
     }
 
-    public void examineSongs(){
-        System.out.println() list;
-    }
-
-    public void examineLikedSongs(){
-        System.out.println() list;
-    }
-
-    public double totalDuration(){
-        double totalTime = 0;
-        for(int i = 0; i < list.size(); i++){
-            Song a = list.getDurration(i);
-            totalTime += list.getDurration(i);
-    }
-
-}
 }
