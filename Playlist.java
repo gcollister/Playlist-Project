@@ -9,12 +9,8 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-<<<<<<< HEAD
 
-    private ArrayList<Song> list;
-=======
     private ArrayList<Song> playlist;
->>>>>>> fc147af9798efbf1867bb3e6d74bec9ee5ac8d38
 
 
 
