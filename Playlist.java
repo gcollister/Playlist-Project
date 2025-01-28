@@ -38,8 +38,8 @@ public class Playlist {
         playlist.add(a);
     }
 
-    public void likeSong(Song a){
-        playlist.isLiked(); // edit
+    public void likeSong(int pos){
+        Song a = playlist.get(pos).likeSong();
     }
 
     public void removeSong(Song a){
