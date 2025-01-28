@@ -39,7 +39,8 @@ public class Playlist {
     }
 
     public void likeSong(int pos){
-        Song a = playlist.get(pos).likeSong();
+        Song a = playlist.get(pos);
+        a.likeSong();
     }
 
     public void removeSong(Song a){
