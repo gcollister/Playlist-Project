@@ -46,7 +46,7 @@ public class Song {
         return title;
       }
 
-      public double getDurration(){
+      public double getDuration(){
         return duration;
       }
 
