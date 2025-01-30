@@ -52,9 +52,40 @@ public class Playlist {
         for(Song a : playlist){
             b += a.toString() + "\n";
         
+        
         b += "Duration: " + a.getDuration(); 
         }
         return b;
+    }
+
+    public String getLikedSongs(){
+        String c = "Liked Songs\n";
+        for(int i = 0; i < playlist.size(); i++){
+            Song a = playlist.get(i);
+                if(a.isLiked() == true){
+                    c += a.toString() + "\n";
+                }
+        
+        c += "Duration: " + a.getDuration();
+            }
+        return c;
+    }
+
+    public int getTotalDuration(){
+        int totalTime = 0;
+        for(Song a : playlist){ //equivalent as using for loop + get(i)?
+            totalTime += a.getDuration();
+        }
+        return totalTime;
+
+    }
+
+    public void removeUnlikedSongs(){
+        for(Song a : playlist){
+            if(a.isLiked() == false){
+                playlist.remove(a);
+            }
+        }
     }
 
 }
