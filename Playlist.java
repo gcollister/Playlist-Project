@@ -38,6 +38,14 @@ public class Playlist {
         playlist.add(a);
     }
 
+    // public String toString(){
+    //     String result = "";
+    //     for(int i = 0; i < playlist.size(); i++){
+    //         result += playlist.get(i).toString() + "\n";
+    //     }
+    //     return result;
+    // }
+
     public void likeSong(int pos){
         Song a = playlist.get(pos);
         a.likeSong();
@@ -50,10 +58,7 @@ public class Playlist {
     public String examineAllSongs(){
         String b = "Songs\n";
         for(Song a : playlist){
-            b += a.toString() + "\n";
-        
-        
-        b += "Duration: " + a.getDuration(); 
+            b += a.getSongInfo() + "\n";
         }
         return b;
     }
@@ -63,10 +68,8 @@ public class Playlist {
         for(int i = 0; i < playlist.size(); i++){
             Song a = playlist.get(i);
                 if(a.isLiked() == true){
-                    c += a.toString() + "\n";
+                    c += a.getSongInfo() + "\n";
                 }
-        
-        c += "Duration: " + a.getDuration();
             }
         return c;
     }
