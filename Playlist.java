@@ -38,21 +38,13 @@ public class Playlist {
         playlist.add(a);
     }
 
-    // public String toString(){
-    //     String result = "";
-    //     for(int i = 0; i < playlist.size(); i++){
-    //         result += playlist.get(i).toString() + "\n";
-    //     }
-    //     return result;
-    // }
-
     public void likeSong(int pos){
         Song a = playlist.get(pos);
         a.likeSong();
     }
 
-    public void removeSong(Song a){
-        playlist.remove(a);
+    public void removeSong(int pos){
+        playlist.remove(pos);
     }
 
     public String examineAllSongs(){
@@ -67,7 +59,7 @@ public class Playlist {
         String c = "Liked Songs\n";
         for(int i = 0; i < playlist.size(); i++){
             Song a = playlist.get(i);
-                if(a.isLiked() == true){
+                if(a.isLiked()){
                     c += a.getSongInfo() + "\n";
                 }
             }
@@ -84,11 +76,16 @@ public class Playlist {
     }
 
     public void removeUnlikedSongs(){
-        for(Song a : playlist){
-            if(a.isLiked() == false){
-                playlist.remove(a);
+        ArrayList <Song> result = new ArrayList <Song>();
+        for (int i = playlist.size() - 1; i >= 0; i--) {
+            Song a = playlist.get(i);
+            if (!a.isLiked()) {
+                playlist.remove(i);
+            } else {
+                result.add(playlist.get(i));
             }
         }
+        playlist = result;
     }
 
 }

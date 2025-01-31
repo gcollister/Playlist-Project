@@ -24,12 +24,13 @@ public class PlaylistTester {
         p.addSong(new Song("Bye Bye Bye", "*NSYNC",3.20));
         p.addSong(new Song("peach eyes", "wave to earth",3.5));
         p.addSong(new Song("Apple Cider", "beabadoobee", 2.58));
+        p.addSong(new Song("light", "wave to earth",3.45));
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
         System.out.println(p.examineAllSongs());
 
-        System.out.println("\nLiking the songs in position 1, 3, 4, etc....\n");
+        System.out.println("\nLiking the songs in position 1, 3, 4\n");
         //Once your songs are 'liked', this should be reflected in the next printout
         p.likeSong(1);
         p.likeSong(3);
@@ -38,8 +39,8 @@ public class PlaylistTester {
         System.out.println("Printing the songs...\n");
         System.out.println(p.examineAllSongs());
 
-        System.out.println("\nRemoving the song in position A, B, C, etc...\n");
-
+        System.out.println("\nRemoving the song in position 2\n");
+        p.removeSong(2);
 
         System.out.println("Printing the songs...\n");
         System.out.println(p.examineAllSongs());
@@ -50,11 +51,11 @@ public class PlaylistTester {
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
-
+        p.getTotalDuration();
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-
+        p.removeUnlikedSongs();
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
