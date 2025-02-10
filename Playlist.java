@@ -66,14 +66,14 @@ public class Playlist {
                     c += a.toString() + "\n";
                 }
         
-        c += "Duration: " + a.getDuration();
+        c += "(" + a.getDuration() + ")";
             }
         return c;
     }
 
     public int getTotalDuration(){
         int totalTime = 0;
-        for(Song a : playlist){ //equivalent as using for loop + get(i)?
+        for(Song a : playlist){ 
             totalTime += a.getDuration();
         }
         return totalTime;
