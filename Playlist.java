@@ -62,18 +62,19 @@ public class Playlist {
                 if(a.isLiked()){
                     c += a.getSongInfo() + "\n";
                 }
-        
-        c += "(" + a.getDuration() + ")";
             }
         return c;
     }
 
-    public int getTotalDuration(){
+    public String getTotalDuration(){
+        int seconds = 0;
         int totalTime = 0;
         for(Song a : playlist){ 
             totalTime += a.getDuration();
         }
-        return totalTime;
+        seconds = totalTime % 60;
+        totalTime -= seconds;
+        return totalTime + ":" + seconds ;
 
     }
 

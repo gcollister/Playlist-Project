@@ -19,12 +19,12 @@ public class PlaylistTester {
          */
         Playlist p = new Playlist();
 
-        p.addSong(new Song("24K Magic", "Bruno Mars", 3.45));
-        p.addSong(new Song("From The Start", "Laufey",2.29));
-        p.addSong(new Song("Bye Bye Bye", "*NSYNC",3.20));
-        p.addSong(new Song("peach eyes", "wave to earth",3.5));
-        p.addSong(new Song("Apple Cider", "beabadoobee", 2.58));
-        p.addSong(new Song("light", "wave to earth",3.45));
+        p.addSong(new Song("24K Magic", "Bruno Mars", 225));
+        p.addSong(new Song("From The Start", "Laufey",185));
+        p.addSong(new Song("Bye Bye Bye", "*NSYNC",200));
+        p.addSong(new Song("peach eyes", "wave to earth",185));
+        p.addSong(new Song("Apple Cider", "beabadoobee", 178));
+        p.addSong(new Song("light", "wave to earth",225));
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly

@@ -7,7 +7,7 @@ public class Song {
     //Fields-- what information do we want each Song to store?
     private String title;
     private String artist;
-    private double duration;
+    private int duration;
     private boolean liked;
 
 
@@ -17,7 +17,7 @@ public class Song {
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
 
-     public Song(String myTitle, String myArtist, double myDuration){
+     public Song(String myTitle, String myArtist, int myDuration){
         title = myTitle;
         artist = myArtist;
         duration = myDuration;
@@ -40,7 +40,7 @@ public class Song {
         return title;
       }
 
-      public double getDuration(){
+      public int getDuration(){
         return duration;
       }
 
