@@ -43,17 +43,14 @@ public class Playlist {
         a.likeSong();
     }
 
-    public void removeSong(Song a){
-        playlist.remove(a);
+    public void removeSong(int pos){
+        playlist.remove(pos);
     }
 
     public String examineAllSongs(){
         String b = "Songs\n";
         for(Song a : playlist){
-            b += a.toString() + "\n";
-        
-        
-        b += "Duration: " + a.getDuration(); 
+            b += a.getSongInfo() + "\n";
         }
         return b;
     }
@@ -62,8 +59,8 @@ public class Playlist {
         String c = "Liked Songs\n";
         for(int i = 0; i < playlist.size(); i++){
             Song a = playlist.get(i);
-                if(a.isLiked() == true){
-                    c += a.toString() + "\n";
+                if(a.isLiked()){
+                    c += a.getSongInfo() + "\n";
                 }
         
         c += "(" + a.getDuration() + ")";
@@ -81,11 +78,16 @@ public class Playlist {
     }
 
     public void removeUnlikedSongs(){
-        for(Song a : playlist){
-            if(a.isLiked() == false){
-                playlist.remove(a);
+        ArrayList <Song> result = new ArrayList <Song>();
+        for (int i = playlist.size() - 1; i >= 0; i--) {
+            Song a = playlist.get(i);
+            if (!a.isLiked()) {
+                playlist.remove(i);
+            } else {
+                result.add(playlist.get(i));
             }
         }
+        playlist = result;
     }
 
 }

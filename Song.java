@@ -23,12 +23,6 @@ public class Song {
         duration = myDuration;
         liked = false;
      }
-    
-
-
-
-
-
 
      /**
       * Methods-- what will you want each Song to do?
@@ -60,6 +54,17 @@ public class Song {
         }else {
             liked = false;
         }
+      }
+
+      
+      public String getSongInfo(){
+        String result = "";
+        if (isLiked()){
+          result = "\"" + title + "\" by " + artist + " (" + duration + ") -- liked";
+        } else {
+          result = "\"" + title + "\" by " + artist + " (" + duration + ")";
+        }
+        return result;
       }
 
 
