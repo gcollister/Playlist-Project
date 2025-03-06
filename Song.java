@@ -44,6 +44,21 @@ public class Song {
         return duration;
       }
 
+      public String displayDuration(){
+        int seconds = 0;
+        int minutes = 0;
+        String secondsProject = "";
+        
+        minutes = duration / 60;
+        seconds = duration % 60;
+        if(seconds < 10){
+          secondsProject = "0" + seconds;
+        } else {
+          secondsProject = seconds + "";
+        }
+        return minutes + ":" + secondsProject;
+      }
+
       public boolean isLiked(){
         return liked;
       }
@@ -60,9 +75,9 @@ public class Song {
       public String getSongInfo(){
         String result = "";
         if (isLiked()){
-          result = "\"" + title + "\" by " + artist + " (" + duration + ") -- liked";
+          result = "\"" + title + "\" by " + artist + " (" + displayDuration() + ") -- liked";
         } else {
-          result = "\"" + title + "\" by " + artist + " (" + duration + ")";
+          result = "\"" + title + "\" by " + artist + " (" + displayDuration() + ")";
         }
         return result;
       }
