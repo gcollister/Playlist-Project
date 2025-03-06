@@ -68,13 +68,22 @@ public class Playlist {
 
     public String getTotalDuration(){
         int seconds = 0;
-        int totalTime = 0;
+        int minutes = 0;
+        int totalTimeCalc = 0;
+        String totalTime = "";
+        String secondsProject = "";
         for(Song a : playlist){ 
-            totalTime += a.getDuration();
+            totalTimeCalc += a.getDuration();
         }
-        seconds = totalTime % 60;
-        totalTime -= seconds;
-        return totalTime + ":" + seconds ;
+        minutes = totalTimeCalc / 60;
+        seconds = totalTimeCalc % 60;
+        if(seconds < 10){
+            secondsProject = "0" + seconds;
+          } else {
+            secondsProject = seconds + "";
+          }
+        totalTime = minutes + ":" + secondsProject;
+        return totalTime;
 
     }
 
