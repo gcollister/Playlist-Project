@@ -32,15 +32,15 @@ public class PlaylistTester {
 
         System.out.println("\nLiking the songs in position 1, 3, 4\n");
         //Once your songs are 'liked', this should be reflected in the next printout
-        p.likeSong(1);
+        p.likeSong(0);
+        p.likeSong(2);
         p.likeSong(3);
-        p.likeSong(4);
 
         System.out.println("Printing the songs...\n");
         System.out.println(p.examineAllSongs());
 
         System.out.println("\nRemoving the song in position 2\n");
-        p.removeSong(2);
+        p.removeSong(1);
 
         System.out.println("Printing the songs...\n");
         System.out.println(p.examineAllSongs());
@@ -51,7 +51,7 @@ public class PlaylistTester {
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
-        p.getTotalDuration();
+        System.out.println(p.getTotalDuration());
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
